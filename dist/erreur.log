@@ -1,0 +1,389 @@
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 562, in enregistrer
+  File "pdf_viewer.py", line 123, in afficher_pdf
+  File "pdf_viewer.py", line 70, in __init__
+  File "pdf_viewer.py", line 89, in _charger_pages
+  File "tkinter\__init__.py", line 1451, in winfo_width
+_tkinter.TclError: bad window path name ".!frame2.!documentformframe12.!visionneusepdf.!frame2.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe8.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe2.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe2.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+    canvas.configure(yscrollcommand=scrollbar.set)
+                                  ^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe6.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+    canvas.configure(yscrollcommand=scrollbar.set)
+                                  ^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe6.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 104, in <lambda>
+    canvas.configure(yscrollcommand=scrollbar.set)
+                                  ^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe6.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 108, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 108, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\document_form.py", line 108, in <lambda>
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!documentformframe3.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "tkinter\__init__.py", line 2068, in __call__
+  File "views\reglements_view.py", line 113, in <lambda>
+    "<MouseWheel>", lambda e: canvas.yview_scroll(int(-e.delta / 120), "units")
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tkinter\__init__.py", line 2114, in yview_scroll
+_tkinter.TclError: invalid command name ".!frame2.!frame3.!reglementsframe.!canvas"
