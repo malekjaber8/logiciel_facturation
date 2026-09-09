@@ -171,8 +171,8 @@ class ReglementsFrame(tk.Frame):
             mode = db.get_details_paiements(d["id"])
             tree.insert("", "end", iid=d["id"], values=(
                 d["numero"], d["date"], d["client_nom"],
-                f"{d['montant_total']:,.3f}", f"{d['montant_paye']:,.3f}",
-                f"{solde:,.3f}", STATUT_LABELS.get(d["statut"], d["statut"]), mode,
+                db.format_montant(d['montant_total']), db.format_montant(d['montant_paye']),
+                db.format_montant(solde), STATUT_LABELS.get(d["statut"], d["statut"]), mode,
             ), tags=(d["statut"],))
             self._documents[d["id"]] = d
         if selection_precedente and str(selection_precedente) in tree.get_children():
@@ -202,7 +202,7 @@ class ReglementsFrame(tk.Frame):
         for p in paiements:
             libelle_mode = db.MODES_PAIEMENT.get(p["mode"], p["mode"] or "-")
             self.tree_detail.insert("", "end", iid=p["id"], values=(
-                p["date"], f"{p['montant']:,.3f}", libelle_mode, p["reference"] or "",
+                p["date"], db.format_montant(p['montant']), libelle_mode, p["reference"] or "",
             ))
 
     def _selectionner_paiement(self, event=None):
@@ -299,7 +299,7 @@ class DialogueReglement(tk.Toplevel):
         self._ligne_info(
             cadre_infos,
             "Solde disponible" if modification else "Solde restant",
-            f"{solde_disponible:,.3f} {devise}", couleur="#c0392b",
+            f"{db.format_montant(solde_disponible)} {devise}", couleur="#c0392b",
         )
 
         tk.Label(self, text="Type de règlement", font=("Segoe UI", 10), bg=FOND).pack(
@@ -376,8 +376,8 @@ class DialogueReglement(tk.Toplevel):
         if montant > self.solde_disponible + 0.001:
             messagebox.showwarning(
                 "Montant trop élevé",
-                f"Le montant dépasse le solde disponible ({self.solde_disponible:,.3f} "
-                f"{self.devise}).",
+                f"Le montant dépasse le solde disponible "
+                f"({db.format_montant(self.solde_disponible)} {self.devise}).",
                 parent=self,
             )
             return

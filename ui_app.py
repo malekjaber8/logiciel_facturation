@@ -55,6 +55,7 @@ class App(tk.Tk):
         from views.document_form import DocumentFormFrame
         from views.historique_view import HistoriqueFrame
         from views.reglements_view import ReglementsFrame
+        from views.statistiques_view import StatistiquesFrame
         from views.parametres_view import ParametresFrame
 
         self.frame_classes = {
@@ -72,6 +73,7 @@ class App(tk.Tk):
             ),
             "historique": HistoriqueFrame,
             "reglements": ReglementsFrame,
+            "statistiques": StatistiquesFrame,
             "parametres": ParametresFrame,
         }
 
@@ -187,6 +189,7 @@ class App(tk.Tk):
         self._section("Suivi")
         self._bouton_menu("historique", "🕒", "Historique")
         self._bouton_menu("reglements", "💰", "Gestion des règlements")
+        self._bouton_menu("statistiques", "📊", "Statistiques")
 
         tk.Frame(self.sidebar, bg=COULEUR_SIDEBAR).pack(fill="both", expand=True)
 

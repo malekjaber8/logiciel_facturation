@@ -306,6 +306,7 @@ class ProduitsFrame(tk.Frame):
         colonnes = ("nom", "code", "categorie", "unite", "prix", "stock", "description")
         self.tree = ttk.Treeview(
             self, columns=colonnes, show="tree headings", style="Produits.Treeview",
+            height=6,
         )
         self.tree.heading("#0", text="Image")
         self.tree.column("#0", width=75, anchor="center", stretch=False)
@@ -374,7 +375,7 @@ class ProduitsFrame(tk.Frame):
             self.tree.insert(
                 "", "end", iid=p["id"], image=icone if icone else "", tags=tags,
                 values=(p["nom"], p["code"] or "", p["categorie"] or "", p["unite"],
-                        f"{p['prix_unitaire']:,.3f}", f"{p['stock']:g}",
+                        db.format_montant(p['prix_unitaire']), f"{p['stock']:g}",
                         p["description"] or ""),
             )
         self.produit_selectionne = None

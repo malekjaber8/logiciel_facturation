@@ -563,9 +563,9 @@ class DocumentFormFrame(tk.Frame):
 
             tk.Label(rangee, text=f"{ligne['quantite']:g}", bg=rangee_bg,
                       font=("Segoe UI", 10), width=10).pack(side="left")
-            tk.Label(rangee, text=f"{ligne['prix_unitaire']:,.3f}", bg=rangee_bg,
+            tk.Label(rangee, text=db.format_montant(ligne['prix_unitaire']), bg=rangee_bg,
                       font=("Segoe UI", 10), width=14).pack(side="left")
-            tk.Label(rangee, text=f"{total_ligne:,.3f}", bg=rangee_bg,
+            tk.Label(rangee, text=db.format_montant(total_ligne), bg=rangee_bg,
                       font=("Segoe UI", 10, "bold"), width=14).pack(side="left")
 
             actions = tk.Frame(rangee, bg=rangee_bg)
@@ -585,7 +585,7 @@ class DocumentFormFrame(tk.Frame):
 
     def _mettre_a_jour_total(self):
         total = sum(l["quantite"] * l["prix_unitaire"] for l in self.lignes)
-        self.total_label.config(text=f"🧮  Total : {total:,.3f} {self.devise}")
+        self.total_label.config(text=f"🧮  Total : {db.format_montant(total)} {self.devise}")
 
     def _vider_formulaire(self):
         self.lignes = []
@@ -663,14 +663,14 @@ class DocumentFormFrame(tk.Frame):
         for d in documents:
             if self.type_doc in ("facture", "bl"):
                 valeurs = (d["numero"], d["date"], d["client_nom"],
-                           f"{d['montant_total']:,.3f}",
+                           db.format_montant(d['montant_total']),
                            STATUT_LABELS_HISTORIQUE.get(d["statut"], d["statut"]))
                 self.tree_historique.insert(
                     "", "end", iid=d["id"], values=valeurs, tags=(d["statut"],),
                 )
             else:
                 valeurs = (d["numero"], d["date"], d["client_nom"],
-                           f"{d['montant_total']:,.3f}")
+                           db.format_montant(d['montant_total']))
                 self.tree_historique.insert("", "end", iid=d["id"], values=valeurs)
             self._documents_historique[d["id"]] = d
         self.document_historique_selectionne = None

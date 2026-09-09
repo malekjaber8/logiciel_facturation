@@ -92,6 +92,14 @@ DEFAULT_PARAMS = {
 }
 
 
+def format_montant(valeur):
+    """Formate un montant selon la convention française (espace pour les
+    milliers, virgule pour les décimales), utilisée dans toute l'interface
+    et sur les PDF - évite le format anglo-saxon "3,170.000" par défaut de
+    Python, incohérent avec le reste de l'appli (dates, libellés en français)."""
+    return f"{valeur:,.3f}".replace(",", " ").replace(".", ",")
+
+
 def get_connection():
     os.makedirs(DATA_DIR, exist_ok=True)
     os.makedirs(PDF_DIR, exist_ok=True)

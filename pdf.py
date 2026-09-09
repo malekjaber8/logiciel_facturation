@@ -12,7 +12,7 @@ import db
 
 
 def _format_montant(valeur, devise):
-    return f"{valeur:,.3f} {devise}".replace(",", " ").replace(".", ",")
+    return f"{db.format_montant(valeur)} {devise}"
 
 
 def generate_pdf(document_id):

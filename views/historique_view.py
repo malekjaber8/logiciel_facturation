@@ -194,8 +194,8 @@ class HistoriqueFrame(tk.Frame):
             mode = db.get_details_paiements(d["id"])
             self.tree.insert("", "end", iid=d["id"], values=(
                 type_label, d["numero"], d["date"], d["client_nom"],
-                f"{d['montant_total']:,.3f}", f"{d['montant_paye']:,.3f}",
-                f"{reste:,.3f}", d["statut"], mode,
+                db.format_montant(d['montant_total']), db.format_montant(d['montant_paye']),
+                db.format_montant(reste), d["statut"], mode,
             ))
             self._documents[d["id"]] = d
 
