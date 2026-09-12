@@ -1,17 +1,22 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 
+from PIL import Image, ImageTk
+
 import db
 
-COULEUR_SIDEBAR = "#1e2530"
-COULEUR_HOVER = "#2b3542"
-COULEUR_ACTIF = "#2563eb"
+# Palette reprise du logo de l'entreprise (fond brun tres sombre, accent bois)
+# au lieu du bleu generique d'origine, pour une identite visuelle coherente.
+COULEUR_SIDEBAR = "#231c14"
+COULEUR_HOVER = "#372c22"
+COULEUR_ACTIF = "#8b5e34"
 COULEUR_TEXTE = "#e2e8f0"
-COULEUR_TEXTE_MUET = "#8b95a5"
-COULEUR_SECTION = "#64748b"
+COULEUR_TEXTE_MUET = "#a3968a"
+COULEUR_SECTION = "#8a7c6f"
 COULEUR_FOND = "#f5f6fa"
 COULEUR_BORDURE = "#e5e7eb"
 COULEUR_TITRE = "#111827"
+LOGO_LARGEUR = 160
 
 
 class App(tk.Tk):
@@ -129,7 +134,7 @@ class App(tk.Tk):
         profil = tk.Frame(droite, bg="white", cursor="hand2")
         profil.pack(side="left")
         tk.Label(
-            profil, text="👤", bg="#dbeafe", fg=COULEUR_ACTIF, font=("Segoe UI", 11),
+            profil, text="👤", bg="#f5ead9", fg=COULEUR_ACTIF, font=("Segoe UI", 11),
             width=2, height=1,
         ).pack(side="left", padx=(0, 8))
         bloc_nom = tk.Frame(profil, bg="white")
@@ -167,15 +172,19 @@ class App(tk.Tk):
     def _build_sidebar(self):
         entete = tk.Frame(self.sidebar, bg=COULEUR_SIDEBAR)
         entete.pack(fill="x", pady=(22, 18), padx=22)
-        nom_entreprise = db.get_param("entreprise_nom", "Facturation")
-        tk.Label(
-            entete, text=f"🪵 {nom_entreprise}", bg=COULEUR_SIDEBAR, fg="white",
-            font=("Segoe UI", 14, "bold"), wraplength=190, justify="left",
-        ).pack(anchor="w")
-        tk.Label(
-            entete, text="Meubles • Chaises • Tables", bg=COULEUR_SIDEBAR,
-            fg=COULEUR_TEXTE_MUET, font=("Segoe UI", 9),
-        ).pack(anchor="w", pady=(2, 0))
+        self._logo_photo = self._charger_logo_sidebar()
+        if self._logo_photo:
+            tk.Label(entete, image=self._logo_photo, bg=COULEUR_SIDEBAR).pack(anchor="w")
+        else:
+            nom_entreprise = db.get_param("entreprise_nom", "Facturation")
+            tk.Label(
+                entete, text=f"🪵 {nom_entreprise}", bg=COULEUR_SIDEBAR, fg="white",
+                font=("Segoe UI", 14, "bold"), wraplength=190, justify="left",
+            ).pack(anchor="w")
+            tk.Label(
+                entete, text="Meubles • Chaises • Tables", bg=COULEUR_SIDEBAR,
+                fg=COULEUR_TEXTE_MUET, font=("Segoe UI", 9),
+            ).pack(anchor="w", pady=(2, 0))
 
         self._bouton_menu("dashboard", "🏠", "Tableau de bord")
 
@@ -207,6 +216,18 @@ class App(tk.Tk):
         tk.Frame(self.sidebar, bg=COULEUR_HOVER, height=1).pack(fill="x", padx=22, pady=(0, 4))
         self._bouton_menu("parametres", "⚙️", "Paramètres")
         tk.Frame(self.sidebar, bg=COULEUR_SIDEBAR, height=14).pack()
+
+    def _charger_logo_sidebar(self):
+        chemin = db.resoudre_chemin_image(db.get_param("entreprise_logo", ""))
+        if not chemin:
+            return None
+        try:
+            img = Image.open(chemin)
+            hauteur = int(img.height * LOGO_LARGEUR / img.width)
+            img = img.resize((LOGO_LARGEUR, hauteur), Image.Resampling.LANCZOS)
+            return ImageTk.PhotoImage(img)
+        except Exception:
+            return None
 
     def _section(self, texte):
         tk.Label(

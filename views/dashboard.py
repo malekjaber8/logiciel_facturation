@@ -11,7 +11,8 @@ BORDURE = "#e5e7eb"
 TEXTE_TITRE = "#111827"
 TEXTE_MUET = "#6b7280"
 
-BLEU = "#2563eb"
+ACCENT = "#8b5e34"
+ACCENT_CLAIR = "#f5ead9"
 VERT_CLAIR = "#dcfce7"
 ROUGE_CLAIR = "#fee2e2"
 ORANGE_CLAIR = "#fef3c7"
@@ -68,14 +69,14 @@ class DashboardFrame(tk.Frame):
         ).pack(anchor="w", pady=(4, 0))
 
         droite = tk.Frame(
-            ligne, bg="#eef2ff", highlightbackground=BORDURE, highlightthickness=1,
+            ligne, bg=ACCENT_CLAIR, highlightbackground=BORDURE, highlightthickness=1,
             padx=14, pady=8,
         )
         droite.pack(side="right")
-        tk.Label(droite, text="📅  Aujourd'hui", bg="#eef2ff", fg=TEXTE_MUET,
+        tk.Label(droite, text="📅  Aujourd'hui", bg=ACCENT_CLAIR, fg=TEXTE_MUET,
                   font=("Segoe UI", 8)).pack(anchor="w")
         tk.Label(
-            droite, text=_date_fr(date.today()), bg="#eef2ff", fg=BLEU,
+            droite, text=_date_fr(date.today()), bg=ACCENT_CLAIR, fg=ACCENT,
             font=("Segoe UI", 10, "bold"),
         ).pack(anchor="w")
 
@@ -88,7 +89,7 @@ class DashboardFrame(tk.Frame):
         ).pack(side="left")
         tk.Button(
             entete, text="Voir tout  →", command=lambda: self.controller.show_frame("historique"),
-            bg=FOND, fg=BLEU, activeforeground=BLEU, activebackground=FOND,
+            bg=FOND, fg=ACCENT, activeforeground=ACCENT, activebackground=FOND,
             font=("Segoe UI", 9, "bold"), bd=0, cursor="hand2",
         ).pack(side="right")
 

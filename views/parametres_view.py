@@ -34,18 +34,26 @@ class ParametresFrame(tk.Frame):
         self.tel_var = tk.StringVar(value=params.get("entreprise_tel", ""))
         ttk.Entry(cadre, textvariable=self.tel_var, width=45).grid(row=2, column=1, pady=5)
 
-        tk.Label(cadre, text="Matricule fiscal", bg=FOND).grid(row=3, column=0, sticky="w", pady=5)
-        self.matricule_var = tk.StringVar(value=params.get("entreprise_matricule", ""))
-        ttk.Entry(cadre, textvariable=self.matricule_var, width=45).grid(row=3, column=1, pady=5)
+        tk.Label(cadre, text="Email", bg=FOND).grid(row=3, column=0, sticky="w", pady=5)
+        self.email_var = tk.StringVar(value=params.get("entreprise_email", ""))
+        ttk.Entry(cadre, textvariable=self.email_var, width=45).grid(row=3, column=1, pady=5)
 
-        tk.Label(cadre, text="Devise", bg=FOND).grid(row=4, column=0, sticky="w", pady=5)
+        tk.Label(cadre, text="WhatsApp", bg=FOND).grid(row=4, column=0, sticky="w", pady=5)
+        self.whatsapp_var = tk.StringVar(value=params.get("entreprise_whatsapp", ""))
+        ttk.Entry(cadre, textvariable=self.whatsapp_var, width=45).grid(row=4, column=1, pady=5)
+
+        tk.Label(cadre, text="Matricule fiscal", bg=FOND).grid(row=5, column=0, sticky="w", pady=5)
+        self.matricule_var = tk.StringVar(value=params.get("entreprise_matricule", ""))
+        ttk.Entry(cadre, textvariable=self.matricule_var, width=45).grid(row=5, column=1, pady=5)
+
+        tk.Label(cadre, text="Devise", bg=FOND).grid(row=6, column=0, sticky="w", pady=5)
         self.devise_var = tk.StringVar(value=params.get("devise", "DT"))
         ttk.Combobox(cadre, textvariable=self.devise_var, values=DEVISES,
-                     state="readonly", width=10).grid(row=4, column=1, sticky="w", pady=5)
+                     state="readonly", width=10).grid(row=6, column=1, sticky="w", pady=5)
 
-        tk.Label(cadre, text="Logo (image)", bg=FOND).grid(row=5, column=0, sticky="w", pady=5)
+        tk.Label(cadre, text="Logo (image)", bg=FOND).grid(row=7, column=0, sticky="w", pady=5)
         logo_frame = tk.Frame(cadre, bg=FOND)
-        logo_frame.grid(row=5, column=1, sticky="w", pady=5)
+        logo_frame.grid(row=7, column=1, sticky="w", pady=5)
         self.logo_var = tk.StringVar(value=params.get("entreprise_logo", ""))
         ttk.Entry(logo_frame, textvariable=self.logo_var, width=35).pack(side="left")
         ttk.Button(logo_frame, text="Parcourir...", command=self.choisir_logo).pack(
@@ -77,6 +85,8 @@ class ParametresFrame(tk.Frame):
         db.set_param("entreprise_nom", self.nom_var.get().strip())
         db.set_param("entreprise_adresse", self.adresse_var.get().strip())
         db.set_param("entreprise_tel", self.tel_var.get().strip())
+        db.set_param("entreprise_email", self.email_var.get().strip())
+        db.set_param("entreprise_whatsapp", self.whatsapp_var.get().strip())
         db.set_param("entreprise_matricule", self.matricule_var.get().strip())
         db.set_param("devise", self.devise_var.get())
         db.set_param("entreprise_logo", self.logo_var.get().strip())

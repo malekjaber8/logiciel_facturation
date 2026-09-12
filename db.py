@@ -86,6 +86,8 @@ DEFAULT_PARAMS = {
     "entreprise_nom": "Mon Entreprise de Meubles",
     "entreprise_adresse": "",
     "entreprise_tel": "",
+    "entreprise_email": "",
+    "entreprise_whatsapp": "",
     "entreprise_matricule": "",
     "entreprise_logo": "",
     "devise": "DT",
