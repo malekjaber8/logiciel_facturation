@@ -137,18 +137,8 @@ class ArticleDialog(tk.Toplevel):
             font=POLICE_ENTREE, style="Dialogue.TCombobox",
         ).grid(row=7, column=1, sticky="we", pady=(0, 12), ipady=3, padx=(12, 0))
 
-        tk.Label(col_champs, text="Quantité en stock", bg=FOND, font=POLICE_LABEL).grid(
-            row=8, column=0, columnspan=2, sticky="w", pady=(0, 4)
-        )
-        self.stock_var = tk.StringVar(
-            value=str(produit["stock"]) if produit else "0"
-        )
-        ttk.Entry(
-            col_champs, textvariable=self.stock_var, font=POLICE_ENTREE, style="Dialogue.TEntry",
-        ).grid(row=9, column=0, columnspan=2, sticky="we", pady=(0, 12), ipady=3)
-
         tk.Label(col_champs, text="Description", bg=FOND, font=POLICE_LABEL).grid(
-            row=10, column=0, columnspan=2, sticky="w", pady=(0, 4)
+            row=8, column=0, columnspan=2, sticky="w", pady=(0, 4)
         )
         self.description_var = tk.StringVar(
             value=(produit["description"] or "") if produit else ""
@@ -156,7 +146,14 @@ class ArticleDialog(tk.Toplevel):
         ttk.Entry(
             col_champs, textvariable=self.description_var, font=POLICE_ENTREE,
             style="Dialogue.TEntry",
-        ).grid(row=11, column=0, columnspan=2, sticky="we", ipady=3)
+        ).grid(row=9, column=0, columnspan=2, sticky="we", ipady=3)
+        if produit:
+            tk.Label(
+                col_champs,
+                text=f"Stock actuel : {produit['stock']:g} — se modifie depuis "
+                     "\"Gestion du stock\".",
+                bg=FOND, fg="#7f8c8d", font=("Segoe UI", 9),
+            ).grid(row=10, column=0, columnspan=2, sticky="w", pady=(10, 0))
 
         # --- Pied : séparateur + actions ---
         ttk.Separator(self, orient="horizontal").pack(fill="x")
@@ -245,19 +242,12 @@ class ArticleDialog(tk.Toplevel):
             messagebox.showwarning("Valeur invalide", "Le prix unitaire doit être un nombre.",
                                     parent=self)
             return
-        try:
-            stock = float(self.stock_var.get().replace(",", "."))
-        except ValueError:
-            messagebox.showwarning("Valeur invalide", "La quantité en stock doit être un nombre.",
-                                    parent=self)
-            return
         self.resultat = {
             "nom": nom,
             "code": code,
             "categorie": self.categorie_var.get().strip(),
             "unite": self.unite_var.get(),
             "prix_unitaire": prix,
-            "stock": stock,
             "description": self.description_var.get().strip(),
             "image_source_path": self.image_source_choisie,
             "supprimer_image": self.supprimer_image_flag,
@@ -391,8 +381,7 @@ class ProduitsFrame(tk.Frame):
             r = dialogue.resultat
             db.add_produit(
                 r["nom"], r["code"], r["description"], r["prix_unitaire"], r["unite"],
-                stock=r["stock"], image_source_path=r["image_source_path"],
-                categorie=r["categorie"],
+                image_source_path=r["image_source_path"], categorie=r["categorie"],
             )
             self.rafraichir()
 
@@ -409,7 +398,7 @@ class ProduitsFrame(tk.Frame):
             r = dialogue.resultat
             db.update_produit(
                 self.produit_selectionne, r["nom"], r["code"], r["description"],
-                r["prix_unitaire"], r["unite"], stock=r["stock"],
+                r["prix_unitaire"], r["unite"],
                 image_source_path=r["image_source_path"],
                 supprimer_image=r["supprimer_image"],
                 categorie=r["categorie"],

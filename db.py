@@ -384,13 +384,15 @@ def code_produit_existe(code, exclure_id=None):
     return row is not None
 
 
-def add_produit(nom, code="", description="", prix_unitaire=0.0, unite="piece", stock=0.0,
+def add_produit(nom, code="", description="", prix_unitaire=0.0, unite="piece",
                  image_source_path=None, categorie=""):
+    """Le stock n'est pas géré ici : un nouvel article démarre à 0 et se
+    renseigne ensuite depuis la page "Gestion du stock" (voir update_stock)."""
     conn = get_connection()
     cur = conn.execute(
-        "INSERT INTO produits (nom, code, description, prix_unitaire, unite, stock, categorie) "
-        "VALUES (?, ?, ?, ?, ?, ?, ?)",
-        (nom, code, description, prix_unitaire, unite, stock, categorie),
+        "INSERT INTO produits (nom, code, description, prix_unitaire, unite, categorie) "
+        "VALUES (?, ?, ?, ?, ?, ?)",
+        (nom, code, description, prix_unitaire, unite, categorie),
     )
     new_id = cur.lastrowid
     conn.commit()
@@ -403,12 +405,15 @@ def add_produit(nom, code="", description="", prix_unitaire=0.0, unite="piece", 
 
 
 def update_produit(produit_id, nom, code="", description="", prix_unitaire=0.0, unite="piece",
-                    stock=0.0, image_source_path=None, supprimer_image=False, categorie=""):
+                    image_source_path=None, supprimer_image=False, categorie=""):
+    """Ne touche jamais la colonne stock : elle se modifie uniquement via
+    update_stock, depuis la page "Gestion du stock", jamais depuis la fiche
+    article."""
     conn = get_connection()
     conn.execute(
-        "UPDATE produits SET nom=?, code=?, description=?, prix_unitaire=?, unite=?, stock=?, "
+        "UPDATE produits SET nom=?, code=?, description=?, prix_unitaire=?, unite=?, "
         "categorie=? WHERE id=?",
-        (nom, code, description, prix_unitaire, unite, stock, categorie, produit_id),
+        (nom, code, description, prix_unitaire, unite, categorie, produit_id),
     )
     if image_source_path:
         chemin_stocke = _copier_image_produit(produit_id, image_source_path)
@@ -416,6 +421,13 @@ def update_produit(produit_id, nom, code="", description="", prix_unitaire=0.0, 
     elif supprimer_image:
         _supprimer_image_produit(produit_id)
         conn.execute("UPDATE produits SET image_path=NULL WHERE id=?", (produit_id,))
+    conn.commit()
+    conn.close()
+
+
+def update_stock(produit_id, stock):
+    conn = get_connection()
+    conn.execute("UPDATE produits SET stock=? WHERE id=?", (stock, produit_id))
     conn.commit()
     conn.close()
 

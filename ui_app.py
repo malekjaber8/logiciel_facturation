@@ -52,6 +52,7 @@ class App(tk.Tk):
         from views.dashboard import DashboardFrame
         from views.clients_view import ClientsFrame
         from views.produits_view import ProduitsFrame
+        from views.stock_view import StockFrame
         from views.document_form import DocumentFormFrame
         from views.historique_view import HistoriqueFrame
         from views.reglements_view import ReglementsFrame
@@ -62,6 +63,7 @@ class App(tk.Tk):
             "dashboard": DashboardFrame,
             "clients": ClientsFrame,
             "produits": ProduitsFrame,
+            "stock": StockFrame,
             "facture": lambda parent, controller, **kw: DocumentFormFrame(
                 parent, controller, "facture", **kw
             ),
@@ -179,6 +181,7 @@ class App(tk.Tk):
 
         self._section("Gestion")
         self._bouton_menu("produits", "📦", "Articles")
+        self._bouton_menu("stock", "📥", "Gestion du stock")
         self._bouton_menu("clients", "👥", "Clients")
 
         self._section("Facturation")
